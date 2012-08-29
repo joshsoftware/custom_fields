@@ -20,13 +20,18 @@ module Mongoid #:nodoc:
           # @option options [ Object ] :default The default value for the field.
           # @option options [ String ] :label The field's label.
           #
-          def instantiate_with_localize(name, options = {})
-            instantiate_without_localize(name, options).tap do |field|
+         # def instantiate_with_localize(name, options = {})
+         #   instantiate_without_localize(name, options).tap do |field|
+         #     puts "instantiate_with_localize...#{name} / #{options}" # DEBUG
+         #     field.original_field_type = Mappings.for(options[:type], options[:identity]).instantiate(name, options)
+         #   end
+         # end
+          def instantiate(name, options = {})
+            super(name, options).tap do |field|
               field.original_field_type = Mappings.for(options[:type], options[:identity]).instantiate(name, options)
             end
-          end
-
-          alias_method_chain :instantiate, :localize
+          end  
+          #alias_method_chain :instantiate, :localize
 
         end
 

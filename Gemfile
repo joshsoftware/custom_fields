@@ -19,3 +19,5 @@ platforms :mri_19 do
     gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :mri_19 if RUBY_VERSION < '1.9.3'
   end
 end
+
+gem 'carrierwave-mongoid', :git => 'https://github.com/jnicklas/carrierwave-mongoid.git', :branch => 'mongoid-3.0'

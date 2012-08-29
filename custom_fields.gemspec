@@ -19,13 +19,13 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.rubyforge_project         = 'nowarning'
 
-  s.add_dependency 'mongoid', '~> 2.4.12'
+  s.add_dependency 'mongoid', "~> 3.0.4"
   s.add_dependency 'activesupport', '~> 3.2.8'
-  s.add_dependency 'carrierwave-mongoid', '~> 0.1.3'
+  s.add_dependency 'carrierwave-mongoid'
 
   s.add_development_dependency('yard', ['~> 0.7.3'])
-  s.add_development_dependency('bson', ['~> 1.3.1'])
-  s.add_development_dependency('mongo', ['~> 1.3.1'])
+  s.add_development_dependency('bson')
+  s.add_development_dependency('mongo')
   s.add_development_dependency('bson_ext', ['~> 1.3.1'])
   s.add_development_dependency('mocha', ['~> 0.9.12'])
   s.add_development_dependency('rspec', ['~> 2.6'])
