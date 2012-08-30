@@ -13,7 +13,6 @@ PATH
   specs:
     custom_fields (2.0.0.rc13)
       activesupport (~> 3.2.8)
-      carrierwave-mongoid
       mongoid (~> 3.0.4)
 
 GEM
@@ -27,6 +26,7 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    archive-tar-minitar (0.5.2)
     bson (1.7.0)
     bson_ext (1.7.0)
       bson (~> 1.7.0)
@@ -40,6 +40,8 @@ GEM
     i18n (0.6.0)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
+    linecache19 (0.5.12)
+      ruby_core_source (>= 0.1.4)
     mime-types (1.19)
     mocha (0.9.12)
     mongo (1.7.0)
@@ -70,6 +72,16 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
+    ruby-debug-base19 (0.11.25)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.5)
+      archive-tar-minitar (>= 0.5.2)
     simplecov (0.6.4)
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
@@ -93,5 +105,6 @@ DEPENDENCIES
   rake
   rspec (~> 2.6)
   ruby-debug
+  ruby-debug19
   simplecov (~> 0.6.1)
   yard (~> 0.7.3)
