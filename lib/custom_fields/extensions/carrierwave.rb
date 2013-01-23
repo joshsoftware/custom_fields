@@ -12,7 +12,7 @@ module CarrierWave
 
         value = read_attribute(name.to_sym)
         unless value.nil?
-          self.class.fields[name.to_s].deserialize(value)
+          value
         else
           nil
         end
